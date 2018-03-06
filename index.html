@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bright Light</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<!-- Resize Modal -->
+
+    <div id="resize-modal" class="modal">
+        <div id="modal-content">
+        <p id="resize-close" class="close">&times;</p>
+        <form id="sizePicker">
+        <span class="form-height form-label">Grid Height:
+            <input type="number" id="inputHeight" name="height" min="1" max="32" value="1">
+        </span>
+        <span class="form-width form-label">
+        Grid Width:
+            <input type="number" id="inputWeight" name="width" min="1" max="84" value="1">
+        </span>
+            <input type="submit" id="submit">
+       </form>
+       <div class="preset-size-container">
+           <button class="size-button small-size coming-soon">Small<span class="size-tool">Coming Soon</span></button>
+           <button class="size-button coming-soon">Medium<p class="size-tool">Coming Soon</p></button>
+           <button class="size-button coming-soon">Large<p class="size-tool">Coming Soon</p></button>
+       </div>
+
+        </div>
+    </div>
+
+
+<!-- Color Modal -->
+
+    <div id="color-modal" class="modal">
+            <p id="color-close" class="close">&times;</p>
+        <div id="color-modal-content">
+            <div class="color-square top-row" id="red-square"></div>
+            <div class="color-square top-row" id="orange-square"></div>
+            <div class="color-square top-row" id="yellow-square"></div>
+            <div class="color-square top-row" id="green-square"></div>
+            <div class="color-square" id="blue-square"></div>
+            <div class="color-square" id="purple-square"></div>
+            <div class="color-square" id="pink-square"></div>
+            <div class="color-square" id="white-square"></div>
+        </div>
+    </div>
+
+<!-- Disabled Div -->
+
+
+<!-- header -->
+    <div class="header">
+     <img id="logo" src="Logo.png" alt="Bright Light">
+     <img id="lightsOff" src="light.png" alt="Bright Light light bulb">
+    </div>
+
+<!-- Stripe  -->
+    <div id="stripe">
+        <button id="color">Choose Color</button>
+        <button id="color-preview">&nbsp;</button>
+        <button id="paint-brush" class="selected mode">Paint</button>
+        <button id="erase" class="mode">Erase</button>
+        <button id="turnOn">Light</button>
+        <button id="clear">Clear</button>
+        <button id="resize">Resize</button>
+        <button id="fullscreen" class="coming-soon">Fullscreen<span class="tooltiptext">Coming Soon</span></button>
+        <button id="reset">Reset</button>
+    </div>
+
+<!-- Pixel Canvas -->
+
+     <table id="pixelCanvas"></table>
+
+
+    <script src="designs.js"></script>
+</body>
+</html>
+

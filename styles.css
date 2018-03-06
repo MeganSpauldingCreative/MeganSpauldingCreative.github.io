@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    background-color: #080808;
+    color: white;
+    font-family: futura;
+    overflow: hidden;
+}
+
+
+.header{
+    height: 25%;
+    background-image: url(galaxy.jpg);
+    background-size: cover;
+}
+
+/*Header*/
+#logo{
+    height: 50%;
+    display: block;
+    margin: auto;
+    top: 25%;
+    position: relative;
+}
+#lightsOff{
+    display: none;
+    z-index: 1;
+    margin: auto;
+    top: 12.5%;
+    height: 75%;
+    position: relative;
+}
+
+/*STRIPE*/
+
+#stripe{
+    width: 100%;
+    text-align: center;
+    background-color: #f2f2f2;
+    height: 5%;
+}
+
+button{
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: bold;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+    outline: none;
+    margin: auto 10px;
+    padding: 0 1%;
+    font-family: inherit;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#color-preview{
+    background-color: red;
+    height: 50%;
+    margin-left: 0;
+    padding: 0 .55%;
+    border-radius: 100%
+}
+
+#color{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/*Pixel Table*/
+
+table{
+    margin: 5px 5px;
+    border-spacing: 5px;
+    width: 100%;
+}
+
+td{
+    border: 1px solid none;
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    background-color: #505050;
+    cursor: pointer;
+}
+
+td:hover{
+    opacity: .5;
+}
+
+.selected{
+    color: #f2f2f2;
+    background-color: steelblue;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    margin: 12% 30%;
+    width: 40%;
+    height: 44%;
+    overflow: auto;
+    background-color: #f2f2f2;
+    color: steelblue;
+    border-radius: 8px;
+    box-shadow: -7px 7px 7px rgba(0, 0, 0, .5);
+}
+
+/*Modal Disable*/
+.disable{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%
+    height: 100%;
+    background-color: white;
+}
+
+/*Modal Close Buttons*/
+
+.close{
+    color: steelblue;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+/*Square Modal Styling*/
+
+.color-square{
+    width: 21%;
+    margin: 2%;
+    padding-bottom: 20%;
+    float: left;
+    border-radius: 100%;
+}
+
+.color-square:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.top-row{
+    margin-top: 0;
+}
+
+#color-modal-content{
+    margin-top: 0;
+}
+
+/*Color Fills*/
+
+#red-square{
+    background-color: red;
+}
+
+#orange-square{
+    background-color: #FF7722;
+}
+
+#yellow-square{
+    background-color: #FFCC11;
+}
+
+#green-square{
+    background-color: #66CD00;
+}
+
+#blue-square{
+    background-color: #1D7CF2;
+}
+
+#purple-square{
+    background-color: #BA55D3;
+}
+
+#pink-square{
+    background-color: #FF82AB;
+}
+
+#white-square{
+    background-color: white;
+}
+
+/*Resize Modal*/
+
+form{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-bottom: 0;
+    text-align: left;
+    width: 35%;
+    margin: auto;
+}
+
+.form-width{
+    display: block;
+    margin-top: 6%;
+}
+
+
+input[type=number]{
+    border: none;
+    font-family: inherit;
+    font-size: .75em;
+    color: steelblue;
+    outline: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 8px;
+    text-align: center;
+    float: right;
+}
+
+#submit{
+    display: block;
+    background: none;
+    border: 1px solid steelblue;
+    padding: 7px;
+    border-radius: 8px;
+    color: steelblue;
+    font-size: .5em;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: auto;
+    width: 35%;
+    margin-top: 5%
+
+}
+
+#submit:hover{
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+}
+
+.preset-size-container{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.size-button{
+    display:block;
+    float: left;
+    background-color: white;
+    color: steelblue;
+    font-family: inherit;
+    font-weight: normal;
+    border-radius: 8px;
+    width: 20%;
+    padding: 8% 0;
+}
+
+.size-button:hover{
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+}
+
+.small-size{
+    margin-left: 16.5%;
+}
+
+
+
+
+
+/*COMING SOON STYLING*/
+.coming-soon {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: steelblue;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 10px;
+    width: 120px;
+    top: 0%;
+    left: 50%; 
+    margin-left: -70px;
+    position: absolute;
+    z-index: 1;
+    font-size: .8em;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.coming-soon:hover .tooltiptext, .coming-soon:hover .size-tool {
+    visibility: visible;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+/*size tool*/
+.size-tool{
+    visibility: hidden;
+    background-color: steelblue;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 35.5% 10px;
+    width: 82.75%;
+    border-radius: 8px;
+    top: 0%;
+    left: 0%; 
+    position: absolute;
+    z-index: 1;
+    font-size: .8em;
+}
+
+/*LightDIVS*/
+
+.red-light{
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #FFE4E1,  /* inner white */
+        0 0 5px 3.5px #FF0000, /* middle magenta */
+        0 0 5px 5px #FFFAFA; /* outer cyan */
+}
+
+.orange-light{
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #FEF0DB,  /* inner white */
+        0 0 5px 3.5px #FF7722, /* middle magenta */
+        0 0 5px 5px #FEE8D6; /* outer cyan */
+}
+
+.yellow-light{
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #FFF8DC,  /* inner white */
+        0 0 5px 3.5px #FFE303, /* middle magenta */
+        0 0 5px 5px #EEDD82; /* outer cyan */
+}
+
+.green-light{
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #F0FFF0,  /* inner white */
+        0 0 5px 3.5px #66FF66, /* middle magenta */
+        0 0 5px 5px #00CD00; /* outer cyan */
+}
+
+.blue-light{
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #E0FFFF,  /* inner white */
+        0 0 5px 3.5px #05E9FF, /* middle magenta */
+        0 0 5px 5px #C1F0F6; /* outer cyan */
+}
+
+.purple-light{
+    margin-left: 80px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #FFE1FF,  /* inner white */
+        0 0 5px 3.5px #FF00FF, /* middle magenta */
+        0 0 5px 5px #EEAEEE; /* outer cyan */
+}
+
+.pink-light{
+    margin-left: 80px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #FFF0F5,  /* inner white */
+        0 0 5px 3.5px #FF0066, /* middle magenta */
+        0 0 5px 5px #F6CCDA; /* outer cyan */
+}
+
+.white-light{
+    margin-left: 80px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #FFF;
+    box-shadow:
+        0 0 4px 3px #F7F7F7,  /* inner white */
+        0 0 5px 3.5px #E0FFFF, /* middle magenta */
+        0 0 5px 5px #FFE1FF; /* outer cyan */
+}
+
+.black-light{
+    background-color: #202020;
+}
+
+/* Painted Classes*/
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: rgb(255, 119, 34);
+}
+.yellow{
+    background-color: rgb(255, 204, 17);
+}
+.green{
+    background-color: rgb(102, 205, 0);
+}
+.blue{
+    background-color: rgb(29, 124, 242);
+}
+.purple{
+    background-color: rgb(186, 85, 211);
+}
+.pink{
+    background-color: rgb(255, 130, 171);
+}
+.white{
+    background-color: white;
+}
+.empty-td{
+    background-color: #505050;
+}
