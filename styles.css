@@ -80,17 +80,34 @@ button{
 table{
     margin: 5px 5px;
     border-spacing: 5px;
+    border-collapse: separate;
+    empty-cells: show;
     width: 100%;
+    height: 100%;
+
+}
+
+#pixelContainer{
+    width: 100%;
+    height: 70%;
 }
 
 td{
     border: 1px solid none;
-    width: 12px;
-    height: 12px;
-    border-radius: 20px;
+    width: .8%;
+    padding-bottom: .8%;
+    border-radius: 100px;
     background-color: #505050;
     cursor: pointer;
+    font-size: .1em;
 }
+
+/*empty-div{
+    width: 12px;
+    height: 12px;
+    padding-bottom: 12px;
+    background-color: #505050;
+}*/
 
 td:hover{
     opacity: .5;
@@ -440,4 +457,6 @@ input[type=number]{
 }
 .empty-td{
     background-color: #505050;
+    width: .8%;
+    padding-bottom: .8%;
 }

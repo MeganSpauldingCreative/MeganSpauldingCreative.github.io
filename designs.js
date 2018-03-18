@@ -20,6 +20,7 @@ var reset = $("#reset");
 var colorPreview = $("#color-preview");
 var turnOn = $("#turnOn");
 var lightOn = false;
+var pixelCanvas = $("#pixelCanvas");
 
 // When size is submitted by the user, call makeGrid()
 sizePicker.submit(function(){
@@ -27,11 +28,17 @@ sizePicker.submit(function(){
 	$("#pixelCanvas").empty();
 	makeGrid();
 	modal.css("display", "none");
+	let tableWidthCalc = (inputWeight.val()/84) * 100;
+	let tableWidthFinal = tableWidthCalc + "%";
+	pixelCanvas.css("width", tableWidthFinal);
+	let tableHeightCalc = (inputheight.val()/31) * 100;
+	let tableHeightFinal = tableHeightCalc + "%";
+	$("tr").css("height", tableHeightFinal);
 });
 
 // Inital Size
 
-inputHeight.val("32");
+inputHeight.val("31");
 inputWeight.val("84");
 makeGrid();
 
@@ -69,6 +76,17 @@ colorPreview.click(function(){
 
 
 // Make Grid
+// function makeGrid() {
+// 	function makeLine(){
+// 		for(var m = 1; m <=inputHeight.val(); m++){
+// 			$("#pixelCanvas").append("<div class=\"empty-td\"></div>");
+// 		}
+// 	}
+
+// 	for(var n = 1; n <= inputWeight.val(); n++){
+// 		makeLine();
+// 	}
+// }
 function makeGrid() {
 
 	for(var m = 1; m <= inputHeight.val(); m++){
@@ -190,8 +208,8 @@ turnOn.click(function(){
 	$("#lightsOff").css("display", "block");
 });
 
-
-// Turn Light On
+// Recreate with DIV's instead of TD's
+// Erase when Light is off goes to black light
 // Drag and Color
 // Full Screen Mode
 // Hover Effects
@@ -207,3 +225,4 @@ turnOn.click(function(){
 // Add titles to Color and Resize
 // Design Pop UP max grids
 // Change Preview Color
+// Speed up Light On
