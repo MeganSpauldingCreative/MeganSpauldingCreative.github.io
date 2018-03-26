@@ -18,7 +18,12 @@ html, body{
     background-size: cover;
 }
 
-/*Header*/
+/*********************************
+
+    Header
+
+***********************************/
+
 #logo{
     height: 50%;
     display: block;
@@ -35,13 +40,18 @@ html, body{
     position: relative;
 }
 
-/*STRIPE*/
+/*********************************
+
+    Stripe
+
+***********************************/
 
 #stripe{
     width: 100%;
     text-align: center;
     background-color: #f2f2f2;
     height: 5%;
+    min-height: 25px;
 }
 
 button{
@@ -52,7 +62,7 @@ button{
     font-weight: bold;
     color: steelblue;
     letter-spacing: 1px;
-    font-size: inherit;
+    font-size: 1em;
     transition: all 0.3s;
     outline: none;
     margin: auto 10px;
@@ -64,9 +74,11 @@ button{
 
 #color-preview{
     background-color: red;
-    height: 50%;
     margin-left: 0;
-    padding: 0 .55%;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
     border-radius: 100%
 }
 
@@ -75,7 +87,11 @@ button{
     padding-right: 0;
 }
 
-/*Pixel Table*/
+/*********************************
+
+    Pixel Table
+
+***********************************/
 
 table{
     margin: 5px auto;
@@ -90,6 +106,8 @@ td{
     border-radius: 20px;
     background-color: #505050;
     cursor: pointer;
+    min-width: 12px;
+    min-height: 12px;
 }
 
 td:hover{
@@ -101,13 +119,20 @@ td:hover{
     background-color: steelblue;
 }
 
+/*********************************
+
+    Modal 
+
+***********************************/
+
 .modal{
     display: none;
     position: fixed;
     z-index: 2;
-    margin: 12% 30%;
+    top: 20%;
+    left: 30%;
     width: 40%;
-    height: 44%;
+    height: 54%;
     overflow: auto;
     background-color: #f2f2f2;
     color: steelblue;
@@ -115,7 +140,15 @@ td:hover{
     box-shadow: -7px 7px 7px rgba(0, 0, 0, .5);
 }
 
-/*Modal Disable*/
+.modal-header{
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto 4%;
+    padding: 2%;
+    background-color: white;
+}
+
+/* Modal Disable*/
 .disable{
     display: none;
     position: fixed;
@@ -126,14 +159,15 @@ td:hover{
 }
 
 /*Modal Close Buttons*/
-
 .close{
     color: steelblue;
     font-size: 2em;
     font-weight: bold;
-    text-align: right;
-    padding-right: 10px;
-    margin-bottom: 0;
+    position: fixed;
+    z-index: 3;
+    top: 20%;
+    left: 68%;
+
 }
 
 .close:hover,
@@ -144,12 +178,16 @@ td:hover{
 
 }
 
-/*Square Modal Styling*/
+/*********************************
+
+    Square Modal
+
+***********************************/
 
 .color-square{
     width: 21%;
     margin: 2%;
-    padding-bottom: 20%;
+    padding-bottom: 21%;
     float: left;
     border-radius: 100%;
 }
@@ -164,10 +202,10 @@ td:hover{
 }
 
 #color-modal-content{
-    margin-top: 0;
+    margin-top: 4.5%
 }
 
-/*Color Fills*/
+/*Color Square Fills*/
 
 #red-square{
     background-color: red;
@@ -201,7 +239,11 @@ td:hover{
     background-color: white;
 }
 
-/*Resize Modal*/
+/*********************************
+
+    Resize Modal
+
+***********************************/
 
 form{
     text-transform: uppercase;
@@ -285,7 +327,12 @@ input[type=number]{
 
 
 
-/*COMING SOON STYLING*/
+/*********************************
+
+    Coming Soon
+
+***********************************/
+
 .coming-soon {
     position: relative;
     display: inline-block;
@@ -331,7 +378,11 @@ input[type=number]{
     font-size: .8em;
 }
 
-/*LightDIVS*/
+/*********************************
+
+    Light On Classes
+
+***********************************/
 
 .red-light{
     background-color: #FFF;
@@ -413,7 +464,11 @@ input[type=number]{
     background-color: #202020;
 }
 
-/* Painted Classes*/
+/*********************************
+
+    Painted Classes
+
+***********************************/
 .red{
     background-color: red;
 }

@@ -21,7 +21,13 @@ var colorPreview = $("#color-preview");
 var turnOn = $("#turnOn");
 var lightOn = false;
 
-// When size is submitted by the user, call makeGrid()
+
+///////////////////////////////////
+// 
+//  When Size is Selected
+// 
+///////////////////////////////////
+
 sizePicker.submit(function(){
 	event.preventDefault();
 	$("#pixelCanvas").empty();
@@ -29,13 +35,22 @@ sizePicker.submit(function(){
 	modal.css("display", "none");
 });
 
-// Inital Size
+///////////////////////////////////
+// 
+//  Initial Size
+// 
+///////////////////////////////////
 
 inputHeight.val("32");
 inputWeight.val("84");
 makeGrid();
 
-// Resize Modal ---- Open and Close
+
+///////////////////////////////////
+// 
+//  Resize Modal 
+// 
+///////////////////////////////////
 
 
 resize.click(function(){
@@ -49,7 +64,11 @@ resizeClose.click(function(){
 
 
 
-// Color Modal ---- Open and Close
+///////////////////////////////////
+// 
+//  Color Modal
+// 
+///////////////////////////////////
 
 
 color.click(function(){
@@ -68,7 +87,12 @@ colorPreview.click(function(){
 
 
 
-// Make Grid
+///////////////////////////////////
+// 
+//  Make Grid Function
+// 
+///////////////////////////////////
+
 function makeGrid() {
 
 	for(var m = 1; m <= inputHeight.val(); m++){
@@ -81,13 +105,27 @@ function makeGrid() {
 	paintWithColor();
 }
 
-// Clear Button
+
+
+///////////////////////////////////
+// 
+//  Clear Button
+// 
+///////////////////////////////////
+
+
 clearButton.click(function(){
 	$("td").removeClass("red orange yellow green blue purple pink white red-light orange-light yellow-light green-light blue-light purple-light pink-light white-light black-light");
 	$("td").addClass("empty-td");
 });
 
-// Erase
+
+
+///////////////////////////////////
+// 
+//  Erase
+// 
+///////////////////////////////////
 erase.click(function(){
 	paint.removeClass("selected");
 	erase.addClass("selected");
@@ -97,20 +135,23 @@ erase.click(function(){
 });
 });
 
-// Paint
+
+
+///////////////////////////////////
+// 
+//  Paint
+// 
+///////////////////////////////////
+
+
+
 paint.click(function(){
 	paint.addClass("selected");
 	erase.removeClass("selected");
 	paintWithColor();
 });
 
-// Paint Function
-// function paintWithColor(){
-// 	$("td").click(function(){
-// 		var color = colorPreview.css("background-color");
-// 		$(this).css("background-color", color);
-// 	});
-// }
+
 
 function paintWithColor(){
 		$("td").click(function(){
@@ -159,13 +200,21 @@ function paintWithColor(){
 		});
 }
 
-// RESET BUTTON
+///////////////////////////////////
+// 
+//  Reset Button
+// 
+///////////////////////////////////
 
 reset.click(function() {
     location.reload();
 });
 
-// Change Preview Color
+///////////////////////////////////
+// 
+//  Change Preview COlor
+// 
+///////////////////////////////////
 colorSquare.click(function(){
 	var currentColor = $(this).css("background");
 	colorPreview.css("background", currentColor);
@@ -173,7 +222,11 @@ colorSquare.click(function(){
 })
 
 
-// Light On
+///////////////////////////////////
+// 
+//  Light On
+// 
+///////////////////////////////////
 turnOn.click(function(){
 	$("td.red").toggleClass("red-light");
 	$("td.orange").toggleClass("orange-light");
@@ -190,20 +243,3 @@ turnOn.click(function(){
 	$("#lightsOff").css("display", "block");
 });
 
-
-// Turn Light On
-// Drag and Color
-// Full Screen Mode
-// Hover Effects
-// Preset Design
-// Add Keyboard Short Cuts and Hovers to tell the shortcuts
-// Change tool cursor depending on selection
-// Organize Code
-// Turn off functionality when modal is open
-// Change Logo when light is on
-// Style +- buttons on resize modal
-// Save
-// Show Current Selection on Color
-// Add titles to Color and Resize
-// Design Pop UP max grids
-// Change Preview Color

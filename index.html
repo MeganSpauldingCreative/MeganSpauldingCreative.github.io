@@ -12,11 +12,18 @@
 <body>
 
 
-<!-- Resize Modal -->
+<!-- 
+  ===========================
+  
+    Resize Modal 
+
+  ===========================
+-->
 
     <div id="resize-modal" class="modal">
         <div id="modal-content">
         <p id="resize-close" class="close">&times;</p>
+        <h2 class="modal-header">Size Your Grid</h2>
         <form id="sizePicker">
         <span class="form-height form-label">Grid Height:
             <input type="number" id="inputHeight" name="height" min="1" max="32" value="1">
@@ -37,10 +44,18 @@
     </div>
 
 
-<!-- Color Modal -->
+<!-- 
+  ===========================
+  
+    Color Modal 
+
+  ===========================
+-->
 
     <div id="color-modal" class="modal">
             <p id="color-close" class="close">&times;</p>
+
+            <h2 class="modal-header">Choose Your Color</h2>
         <div id="color-modal-content">
             <div class="color-square top-row" id="red-square"></div>
             <div class="color-square top-row" id="orange-square"></div>
@@ -56,13 +71,26 @@
 <!-- Disabled Div -->
 
 
-<!-- header -->
+<!-- 
+  ===========================
+  
+    Header
+
+  ===========================
+-->
+
     <div class="header">
      <img id="logo" src="Logo.png" alt="Bright Light">
      <img id="lightsOff" src="light.png" alt="Bright Light light bulb">
     </div>
 
-<!-- Stripe  -->
+<!-- 
+  ===========================
+  
+    Stripe
+
+  ===========================
+-->
     <div id="stripe">
         <button id="color">Choose Color</button>
         <button id="color-preview">&nbsp;</button>
@@ -75,7 +103,13 @@
         <button id="reset">Reset</button>
     </div>
 
-<!-- Pixel Canvas -->
+<!-- 
+  ===========================
+  
+    Pixel Canvas
+
+  ===========================
+-->
 
      <table id="pixelCanvas"></table>
 
