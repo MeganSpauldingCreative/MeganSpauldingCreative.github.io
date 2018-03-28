@@ -184,6 +184,8 @@ td:hover{
 
 ***********************************/
 
+
+
 .color-square{
     width: 21%;
     margin: 2%;
@@ -203,6 +205,12 @@ td:hover{
 
 #color-modal-content{
     margin-top: 4.5%
+}
+
+/*Selected color*/
+.selected-color{
+    border: 2px solid black;
+    border-spacing: 10px;
 }
 
 /*Color Square Fills*/
@@ -250,7 +258,7 @@ form{
     font-size: 1.5em;
     margin-bottom: 0;
     text-align: left;
-    width: 35%;
+    width: 37%;
     margin: auto;
 }
 
@@ -271,6 +279,7 @@ input[type=number]{
     border-radius: 8px;
     text-align: center;
     float: right;
+    padding-left: 12px;
 }
 
 #submit{
